@@ -1,14 +1,16 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
+import CreateUser from './pages/User/Create';
+import NoMatch from './pages/NoMatch';
 
 function App() {
   return (
-    <>
-      <Route path="/" component={Home} exact></Route>
-      <Route path="/signin" component={SignIn}></Route>
-    </>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/user/create" component={CreateUser} />
+      <Route component={NoMatch} />
+    </Switch>
   );
 }
 
