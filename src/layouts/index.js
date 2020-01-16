@@ -2,6 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
+import "./reset.scss";
+import styles from "./Layout.module.scss";
+
 function Layout({ children, title }) {
   return (
     <>
@@ -9,17 +12,28 @@ function Layout({ children, title }) {
         <html lang="ko" />
         <title>{title ? `${title} - Untitled UI` : "Untitled UI"}</title>
       </Helmet>
-      <header>
-        <h1>Untitled UI</h1>
-        <nav>
-          <Link to="/" exact>
-            홈
-          </Link>
-          <Link to="/user/create">회원가입</Link>
-        </nav>
+
+      <header className={styles.header}>
+        <div className={styles.inner}>
+          <h1 className={styles.title}>Untitled UI</h1>
+          <nav className={styles.nav}>
+            <Link to="/" exact className={styles.button}>
+              홈
+            </Link>
+            <Link to="/user/create" className={styles.button}>
+              회원가입
+            </Link>
+          </nav>
+        </div>
       </header>
-      <main>{children}</main>
+
+      <main className={styles.container}>{children}</main>
+
+      <footer className={styles.footer}>
+        <address className={styles.bi}>카카오페이</address>
+      </footer>
     </>
   );
 }
+
 export default Layout;
