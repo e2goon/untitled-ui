@@ -19,7 +19,6 @@
 .title {
   position: relative;
   margin: 0;
-  font-weight: bold;
   font-size: 48px;
   line-height: 1;
 }
@@ -46,6 +45,7 @@
 }
 
 .container {
+  position: relative;
   margin: -64px auto 0;
   padding: var(--horizontal-padding);
   max-width: calc(var(--width) - 48px);

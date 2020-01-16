@@ -15,10 +15,10 @@ function Layout({ children, title }) {
 
       <header className={styles.header}>
         <div className={styles.inner}>
-          <h1 className={styles.title}>Untitled UI</h1>
+          <h1 className={styles.title}>{title}</h1>
           <nav className={styles.nav}>
             <Link to="/" exact className={styles.button}>
-              홈
+              첫 화면
             </Link>
             <Link to="/user/create" className={styles.button}>
               회원가입
