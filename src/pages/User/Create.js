@@ -1,5 +1,9 @@
 import React from "react";
+
+// layouts
 import Layout from "../../layouts";
+
+// components
 import { Row, Col } from "../../components/Grid";
 import Icon from "../../components/Icon";
 import Input, { InputGroup } from "../../components/Input";

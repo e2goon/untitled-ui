@@ -51,11 +51,13 @@
   .button {
     border-radius: 0;
   }
-  .block:first-child .button {
+  > :first-child.button,
+  > :first-child .button {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
   }
-  .block:last-child .button {
+  > :last-child.button,
+  > :last-child .button {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
   }
