@@ -1,8 +1,19 @@
 :root {
-  --width: 760px;
+  --width: 375px;
   --ratio: 0.5;
   --horizontal-padding: 24px;
   --primary-color: #ffdf00;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
 }
 
 .header {
@@ -11,7 +22,7 @@
   .inner {
     position: relative;
     margin: 0 auto;
-    padding: 64px var(--horizontal-padding) 128px;
+    padding: 48px var(--horizontal-padding) 110px;
     max-width: var(--width);
   }
 }
@@ -19,13 +30,13 @@
 .title {
   position: relative;
   margin: 0;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1;
 }
 
 .nav {
   position: absolute;
-  top: 64px;
+  top: 50px;
   right: var(--horizontal-padding);
   .button {
     display: inline-block;
@@ -48,11 +59,11 @@
   position: relative;
   margin: -64px auto 0;
   padding: var(--horizontal-padding);
-  max-width: calc(var(--width) - 48px);
+  max-width: calc(var(--width));
   min-height: 400px;
   background-color: #fff;
   box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
-  border-radius: 48px;
+  border-radius: 24px;
 }
 
 .footer {

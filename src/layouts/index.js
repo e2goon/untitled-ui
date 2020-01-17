@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
@@ -18,7 +19,7 @@ function Layout({ children, title }) {
           <h1 className={styles.title}>{title}</h1>
           <nav className={styles.nav}>
             <Link to="/" exact className={styles.button}>
-              첫 화면
+              UI 가이드
             </Link>
             <Link to="/user/create" className={styles.button}>
               회원가입
@@ -37,3 +38,8 @@ function Layout({ children, title }) {
 }
 
 export default Layout;
+
+Layout.propTypes = {
+  /** 레이아웃 대제목 */
+  title: PropTypes.string.isRequired
+}

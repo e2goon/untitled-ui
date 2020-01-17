@@ -1,0 +1,10 @@
+.agree {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  &-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

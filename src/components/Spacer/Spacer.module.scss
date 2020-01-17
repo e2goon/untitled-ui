@@ -1,0 +1,10 @@
+.spacer {
+  --height: 16px;
+  height: var(--height);
+  &.x2 {
+    height: calc(var(--height) * 2);
+  }
+  &.x3 {
+    height: calc(var(--height) * 3);
+  }
+}
