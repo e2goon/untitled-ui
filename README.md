@@ -23,10 +23,6 @@
     $ npm start
     ```
 
-## 스타일가이드 실행방법
-
-간결하고 사용이 쉬운 독립적인 UI 컴포넌트를 효율적으로 개발하기 위해 오픈소스 [Storybook](https://storybook.js.org/) 을 선택하였습니다.
-
 ```shell
 $ npm run storybook
 ```
