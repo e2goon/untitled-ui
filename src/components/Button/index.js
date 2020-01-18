@@ -1,34 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import ButtonGroup from './ButtonGroup';
+import ButtonGroup from "./ButtonGroup";
 import styles from "./Button.module.scss";
 
 function Button({ children, type, name, block, sm, style, checked }) {
-  const buttonStyle = classnames({
+  const buttonCls = classnames({
     [styles.button]: true,
     [styles.block]: block,
-    [styles.sm]: sm,
+    [styles.sm]: sm
   });
-  const inputStyle = classnames({
-    [styles.button]: true,
-    [styles.sm]: sm,
+  const labelCls = classnames({
+    [styles.label]: true,
+    [styles.block]: block,
+    [styles.sm]: sm
   });
   if (type === "radio") {
     return (
-      <label className={styles.block} style={style}>
+      <label className={labelCls} style={style}>
         <input
           type="radio"
           name={name}
           className={styles.control}
           defaultChecked={checked}
         />
-        <span className={inputStyle}>{children}</span>
+        <span className={buttonCls}>{children}</span>
       </label>
     );
   } else {
     return (
-      <button type="button" className={buttonStyle} style={style}>
+      <button type="button" className={buttonCls} style={style}>
         {children}
       </button>
     );
@@ -36,9 +37,8 @@ function Button({ children, type, name, block, sm, style, checked }) {
 }
 
 export default Button;
-export {
-  ButtonGroup
-};
+
+export { ButtonGroup };
 
 Button.defaultProps = {};
 
