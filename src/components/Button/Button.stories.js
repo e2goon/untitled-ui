@@ -13,25 +13,6 @@ export const size = () => (
   </>
 );
 
-export const type = () => (
-  <>
-    <h2>Single</h2>
-    <Button>인라인 타입</Button>
-    <Button block>블록 타입</Button>
-
-    <h2>Group</h2>
-    <ButtonGroup>
-      <Button>버튼</Button>
-      <Button>버튼</Button>
-    </ButtonGroup>
-
-    <ButtonGroup>
-      <Button type="radio">버튼</Button>
-      <Button type="radio">버튼</Button>
-    </ButtonGroup>
-  </>
-);
-
 export const radio = () => (
   <>
     <Button type="radio" name="a" checked>
@@ -40,5 +21,21 @@ export const radio = () => (
     <Button type="radio" name="a">
       선택 2
     </Button>
+  </>
+);
+
+export const group = () => (
+  <>
+    <h2>Inline</h2>
+    <ButtonGroup>
+      <Button>버튼 A</Button>
+      <Button>버튼 B</Button>
+    </ButtonGroup>
+
+    <h2>Block</h2>
+    <ButtonGroup block>
+      <Button type="radio" name="a">버튼 A</Button>
+      <Button type="radio" name="a">버튼 B</Button>
+    </ButtonGroup>
   </>
 );

@@ -33,6 +33,7 @@ $primary-color: #ffdf00;
   position: relative;
   display: inline-block;
   .control {
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -55,7 +56,11 @@ $primary-color: #ffdf00;
     display: flex;
   }
   .label {
+    display: block;
     flex: 1;
+    .button {
+      display: block;
+    }
   }
   .button {
     border-radius: 0;
