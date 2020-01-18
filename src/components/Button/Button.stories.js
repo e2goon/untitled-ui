@@ -46,7 +46,6 @@ export const style = () => (
   </>
 );
 
-/** 이 스토리 */
 export const radio = () => (
   <>
     <Button type="radio" name="a" checked>
