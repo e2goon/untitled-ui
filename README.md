@@ -23,6 +23,10 @@
     $ npm start
     ```
 
+## Storybook
+
+스토리북으로 UI 컴포넌트를 독립적으로 구성하여 가이드 합니다.
+
 ```shell
 $ npm run storybook
 ```
