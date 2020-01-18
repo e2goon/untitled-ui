@@ -4,7 +4,11 @@ import classnames from "classnames";
 import ButtonGroup from "./ButtonGroup";
 import styles from "./Button.module.scss";
 
-function Button({ children, type, name, block, sm, style, checked }) {
+/**
+ * `<Button />` 컴포넌트는 다양한 색상, 사이즈를 아직 제공하고 있지 않습니다. 추후 요구사항에 따라 언제든 추가될 수 있습니다.
+ */
+
+export default function Button({ children, type, name, block, sm, style, checked }) {
   const buttonCls = classnames({
     [styles.button]: true,
     [styles.block]: block,
@@ -36,16 +40,17 @@ function Button({ children, type, name, block, sm, style, checked }) {
   }
 }
 
-export default Button;
-
 export { ButtonGroup };
 
 Button.defaultProps = {};
 
 Button.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.string,
+  children: PropTypes.node.isRequired,
+
+  /** name 속성과 같이 사용 */
+  type: PropTypes.oneOf(["radio"]),
   name: PropTypes.string,
+
   block: PropTypes.bool,
   sm: PropTypes.bool,
   style: PropTypes.object,

@@ -3,16 +3,50 @@ import Button, { ButtonGroup } from "../Button";
 
 export default {
   title: "Button",
-  component: Button
+  component: Button,
+  subcomponents: { ButtonGroup }
 };
 
 export const size = () => (
   <>
+    <h2>Single</h2>
     <Button>Normal</Button>
     <Button sm>Small</Button>
+    <Button block>Block</Button>
+
+    <h2>Button Group</h2>
+    <ButtonGroup>
+      <Button>A</Button>
+      <Button>B</Button>
+    </ButtonGroup>
+    <ButtonGroup>
+      <Button type="radio" name="a">A</Button>
+      <Button type="radio" name="a">B</Button>
+    </ButtonGroup>
+    <ButtonGroup block>
+      <Button>A</Button>
+      <Button>B</Button>
+    </ButtonGroup>
+    <ButtonGroup block>
+      <Button type="radio" name="b" checked>A</Button>
+      <Button type="radio" name="b">B</Button>
+    </ButtonGroup>
   </>
 );
 
+export const block = () => (
+  <>
+    <Button block>Block</Button>
+  </>
+);
+
+export const style = () => (
+  <>
+    <Button style={{ border: '2px solid #1b1b1b' }}>Block</Button>
+  </>
+);
+
+/** 이 스토리 */
 export const radio = () => (
   <>
     <Button type="radio" name="a" checked>
@@ -21,21 +55,5 @@ export const radio = () => (
     <Button type="radio" name="a">
       선택 2
     </Button>
-  </>
-);
-
-export const group = () => (
-  <>
-    <h2>Inline</h2>
-    <ButtonGroup>
-      <Button>버튼 A</Button>
-      <Button>버튼 B</Button>
-    </ButtonGroup>
-
-    <h2>Block</h2>
-    <ButtonGroup block>
-      <Button type="radio" name="a">버튼 A</Button>
-      <Button type="radio" name="a">버튼 B</Button>
-    </ButtonGroup>
   </>
 );
