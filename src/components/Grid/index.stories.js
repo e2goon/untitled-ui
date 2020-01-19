@@ -4,8 +4,6 @@ import { Row, Col } from ".";
 import Input from '../Input'
 import Button from '../Button'
 
-import '../../scss/global.scss';
-
 const colStyle = {
   padding: "10px",
   border: "1px solid #ccc",
