@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
-import "./reset.scss";
+import "../scss/global.scss";
 import styles from "./Layout.module.scss";
 
 function Layout({ children, title }) {

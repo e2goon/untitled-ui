@@ -1,5 +1,7 @@
 import React from "react";
-import Button, { ButtonGroup } from "../Button";
+import Button, { ButtonGroup } from ".";
+
+import '../../scss/global.scss';
 
 export default {
   title: "Button",
