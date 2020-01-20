@@ -35,15 +35,11 @@ export const size = () => (
 );
 
 export const block = () => (
-  <>
-    <Button block>Block</Button>
-  </>
+  <Button block>Block</Button>
 );
 
 export const style = () => (
-  <>
-    <Button style={{ border: '2px solid #1b1b1b' }}>Block</Button>
-  </>
+  <Button style={{ border: '2px solid #1b1b1b' }}>Block</Button>
 );
 
 export const radio = () => (
