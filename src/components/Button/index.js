@@ -8,16 +8,18 @@ import styles from "./Button.module.scss";
  * `<Button />` 컴포넌트는 다양한 색상, 사이즈를 아직 제공하고 있지 않습니다. 추후 요구사항에 따라 언제든 추가될 수 있습니다.
  */
 
-export default function Button({ children, type, name, block, sm, style, checked }) {
+export default function Button({ children, type, name, block, sm, className, style, checked }) {
   const buttonCls = classnames({
     [styles.button]: true,
     [styles.block]: block,
-    [styles.sm]: sm
+    [styles.sm]: sm,
+    [className]: true
   });
   const labelCls = classnames({
     [styles.label]: true,
     [styles.block]: block,
-    [styles.sm]: sm
+    [styles.sm]: sm,
+    [className]: true
   });
   if (type === "radio") {
     return (
@@ -53,6 +55,7 @@ Button.propTypes = {
 
   block: PropTypes.bool,
   sm: PropTypes.bool,
+  className: PropTypes.string,
   style: PropTypes.object,
   checked: PropTypes.bool
 };

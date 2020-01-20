@@ -9,7 +9,11 @@
     padding: 10px 14px;
     font-size: 16px;
   }
+  &.block {
+    width: 100%;
+  }
   .control {
+    width: 100%;
     padding: 12px 16px;
     font-size: 18px;
     border: none;
@@ -21,17 +25,12 @@
   }
 }
 
-.block {
-  width: 100%;
-  .control {
-    width: 100%;
-  }
-}
-
 .group {
-  display: flex;
-  width: 100%;
-  > * {
+  display: inline-flex;
+  &.block {
+    display: flex;
+  }
+  .col {
     flex: 1;
     border-radius: 0 !important;
     &:first-child {

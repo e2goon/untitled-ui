@@ -46,7 +46,7 @@ export default function Create() {
               />
             </Col>
             <Col>
-              <InputGroup>
+              <InputGroup block>
                 <Select text="2000년" sm>
                   <option value="2000">2000년</option>
                   <option value="2001">2001년</option>
