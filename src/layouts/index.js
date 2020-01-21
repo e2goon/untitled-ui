@@ -18,7 +18,7 @@ function Layout({ children, title }) {
         <div className={styles.inner}>
           <h1 className={styles.title}>{title}</h1>
           <nav className={styles.nav}>
-            <Link to="/" exact className={styles.button}>
+            <Link to="/" className={styles.button}>
               UI 가이드
             </Link>
             <Link to="/user/create" className={styles.button}>
