@@ -18,10 +18,10 @@ export default function Select({ children, text, sm, className, style, block }) 
   }
   return (
     <div className={cls} style={style}>
-      <span className={styles.toggle}>{txt}</span>
       <select value={val} className={styles.control} onChange={onChange}>
         {children}
       </select>
+      <span className={styles.toggle}>{txt}</span>
     </div>
   );
 }
