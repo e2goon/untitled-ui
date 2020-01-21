@@ -1,10 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import InputGroup from './InputGroup'
+import InputGroup from "./InputGroup";
 import styles from "./Input.module.scss";
 
-export default function Input({ type, placeholder, value, sm, block, className, style, autocomplete }) {
+export default function Input({
+  type,
+  placeholder,
+  value,
+  sm,
+  block,
+  className,
+  style,
+  autocomplete
+}) {
   const cls = classnames({
     [styles.input]: true,
     [styles.sm]: sm,
@@ -24,16 +33,15 @@ export default function Input({ type, placeholder, value, sm, block, className, 
   );
 }
 
-export {
-  InputGroup
-}
+export { InputGroup };
 
 Input.defaultProps = {
   type: "text"
 };
 
 Input.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.oneOf(["text", "number", "email", "search", "tel", "url"])
+    .isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
   autocomplete: PropTypes.bool,

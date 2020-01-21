@@ -22,6 +22,6 @@ export default function InputGroup({ children, block }) {
 }
 
 InputGroup.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   block: PropTypes.bool
 };
