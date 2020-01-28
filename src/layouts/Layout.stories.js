@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Layout from ".";
 
 export default {
-  title: "Layout",
+  title: "layouts|Layout",
   component: Layout
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Input, { InputGroup } from '.';
 
 export default {
-  title: 'Input',
+  title: 'components|Input',
   component: Input,
   subcomponents: { InputGroup }
 }

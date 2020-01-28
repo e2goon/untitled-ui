@@ -1,18 +1,19 @@
 import React from "react";
-import { Row, Col } from ".";
+import Grid, { Row, Col } from ".";
 
-import Input from '../Input'
-import Button from '../Button'
+import Input from "../Input";
+import Button from "../Button";
 
 const colStyle = {
   padding: "10px",
   border: "1px solid #ccc",
   borderRadius: "10px",
-  backgroundColor: '#fafafa'
+  backgroundColor: "#fafafa"
 };
 
 export default {
-  title: "Grid",
+  title: "design system|Grid",
+  component: Grid,
   subcomponents: { Row, Col }
 };
 
@@ -25,7 +26,7 @@ export const basic = () => (
   </Row>
 );
 
-export const auto = () => (
+export const columnAuto = () => (
   <Row>
     <Col auto style={colStyle}>
       col auto
