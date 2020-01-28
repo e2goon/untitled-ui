@@ -9,9 +9,9 @@ export default function Switch({ checked, disabled, onClick, className }) {
     [className]: className
   });
   const [isChecked, setChecked] = useState(checked);
-  const handleClick = function(e) {
+  const handleChange = function(e) {
     setChecked(!isChecked);
-    onClick(e, isChecked);
+    onClick && onClick(e, isChecked);
   }
   return (
     <div className={cls}>
@@ -20,7 +20,7 @@ export default function Switch({ checked, disabled, onClick, className }) {
         className={styles.control}
         checked={isChecked}
         disabled={disabled}
-        onClick={handleClick}
+        onChange={handleChange}
       />
       <span className={styles.icon}></span>
     </div>
