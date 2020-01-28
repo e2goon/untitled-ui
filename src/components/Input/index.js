@@ -40,7 +40,7 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
-  type: PropTypes.oneOf(["text", "number", "email", "search", "tel", "url"])
+  type: PropTypes.oneOf(["text", "password", "number", "email", "search", "tel", "url"])
     .isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string,
