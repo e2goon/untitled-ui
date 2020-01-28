@@ -6,6 +6,10 @@ import styles from "./Button.module.scss";
 
 /**
  * `<Button />` 컴포넌트는 다양한 색상, 사이즈를 아직 제공하고 있지 않습니다. 추후 요구사항에 따라 언제든 추가될 수 있습니다.
+ * 
+ * **TODO:**
+ * 
+ * - 추후 버튼을 Input(Checkbox, Radio) 컴포넌트와 연계하여 사용할 수 있도록 고려
  */
 
 export default function Button({ children, type, name, block, sm, className, style, checked }) {
