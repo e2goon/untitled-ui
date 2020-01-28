@@ -9,9 +9,10 @@ export default {
 
 export const basic = () => (
   <>
-    <Switch onClick={action('click')} />
-    <Switch onClick={action('click')} checked />
-    <Switch onClick={action('click')} disabled />
+    <Switch onChange={action('change')} />
+    <Switch onChange={action('change')} checked />
+    <Switch onChange={action('change')} disabled />
+    <Switch onChange={action('change')} checked disabled />
   </>
 )
 
@@ -21,4 +22,8 @@ export const checked = () => (
 
 export const disabled = () => (
   <Switch disabled />
+)
+
+export const checkedDisabled = () => (
+  <Switch checked disabled />
 )

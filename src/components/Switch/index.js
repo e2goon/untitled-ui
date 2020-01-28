@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import styles from "./Switch.module.scss";
 
-export default function Switch({ checked, disabled, onClick, className }) {
+export default function Switch({ checked, disabled, onChange, className }) {
   const cls = classnames({
     [styles.switch]: true,
     [className]: className
@@ -11,7 +11,7 @@ export default function Switch({ checked, disabled, onClick, className }) {
   const [isChecked, setChecked] = useState(checked);
   const handleChange = function(e) {
     setChecked(!isChecked);
-    onClick && onClick(e, isChecked);
+    onChange && onChange(e, isChecked);
   }
   return (
     <div className={cls}>
@@ -31,7 +31,7 @@ Switch.propTypes = {
   className: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onClick: PropTypes.func
+  onChange: PropTypes.func
 };
 
 Switch.defaultProps = {
