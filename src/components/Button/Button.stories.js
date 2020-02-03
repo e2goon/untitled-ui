@@ -13,19 +13,22 @@ export const size = () => (
     <Button>Normal</Button>
     <Button sm>Small</Button>
     <Button block>Block</Button>
+    <Button className="test">Block</Button>
 
     <h2>Button Group</h2>
     <ButtonGroup>
       <Button>A</Button>
       <Button>B</Button>
     </ButtonGroup>
-    <ButtonGroup>
-      <Button type="radio" name="a">A</Button>
-      <Button type="radio" name="a">B</Button>
-    </ButtonGroup>
     <ButtonGroup block>
       <Button>A</Button>
       <Button>B</Button>
+    </ButtonGroup>
+
+    <h3>Radio</h3>
+    <ButtonGroup>
+      <Button type="radio" name="a" checked>A</Button>
+      <Button type="radio" name="a">B</Button>
     </ButtonGroup>
     <ButtonGroup block>
       <Button type="radio" name="b" checked>A</Button>
