@@ -37,10 +37,6 @@ function Layout({ children, title }) {
       </header>
 
       <main className={styles.container}>{children}</main>
-
-      <footer className={styles.footer}>
-        <address className={styles.bi}>카카오페이</address>
-      </footer>
     </>
   );
 }

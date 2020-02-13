@@ -46,7 +46,7 @@
 
 .container {
   position: relative;
-  margin: -64px auto 0;
+  margin: -64px auto 100px;
   padding: var(--horizontal-padding);
   max-width: calc(var(--width));
   min-height: 400px;
@@ -54,17 +54,3 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
   border-radius: 24px;
 }
-
-.footer {
-  padding: 48px 0;
-  text-align: center;
-  .bi {
-    display: inline-block;
-    width: calc(145px * (var(--ratio)));
-    height: calc(46px * (var(--ratio)));
-    background: url(./img-logo.png) no-repeat 0 0 / cover;
-    opacity: .2;
-    text-indent: -1000em;
-  }
-}
-
