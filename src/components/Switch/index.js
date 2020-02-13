@@ -1,25 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import styles from './Switch.module.scss';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import styles from "./Switch.module.scss";
 
-function Switch({ checked, disabled, className }) {
+export default function Switch({ checked, disabled, onChange, className }) {
   const cls = classnames({
     [styles.switch]: true,
-    [className]: true
-  })
+    [className]: className
+  });
+  const [isChecked, setChecked] = useState(checked);
+  const handleChange = function(e) {
+    setChecked(!isChecked);
+    onChange && onChange(e, isChecked);
+  }
   return (
     <div className={cls}>
-      <input type="checkbox" className={styles.control} checked={checked} disabled={disabled} />
+      <input
+        type="checkbox"
+        className={styles.control}
+        checked={isChecked}
+        disabled={disabled}
+        onChange={handleChange}
+      />
       <span className={styles.icon}></span>
     </div>
-  )
+  );
 }
-
-export default Switch;
 
 Switch.propTypes = {
   className: PropTypes.string,
   checked: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func
 };
+
+Switch.defaultProps = {
+  checked: false
+}

@@ -12,7 +12,7 @@ import Button, { ButtonGroup } from "../../components/Button";
 import Select from "../../components/Select";
 import Switch from "../../components/Switch";
 
-import './create.scss';
+import "./create.scss";
 
 export default function Create() {
   return (
@@ -28,7 +28,7 @@ export default function Create() {
             <Input type="password" placeholder="비밀번호" autocomplete block />
           </Row>
           <Spacer x3 />
-          <ButtonGroup>
+          <ButtonGroup block>
             <Button type="radio" name="gender" sm block checked>
               남자
             </Button>
@@ -39,10 +39,14 @@ export default function Create() {
           <Spacer x2 />
           <Row>
             <Col auto>
-              <Icon name="birthday-cake" text="생일" style={{ marginRight: '12px' }} />
+              <Icon
+                name="birthday-cake"
+                text="생일"
+                style={{ marginRight: "12px" }}
+              />
             </Col>
             <Col>
-              <InputGroup>
+              <InputGroup block>
                 <Select text="2000년" sm>
                   <option value="2000">2000년</option>
                   <option value="2001">2001년</option>
@@ -63,16 +67,22 @@ export default function Create() {
           <Spacer />
           <Row>
             <Col auto>
-              <Icon name="phone-alt" text="전화" style={{ marginRight: '12px' }} />
+              <Icon
+                name="phone-alt"
+                text="전화"
+                style={{ marginRight: "12px" }}
+              />
             </Col>
             <Col>
               <InputGroup>
-                <Select text="010" sm style={{ flex: 'none' }}>
+                <Select text="010" sm style={{ flex: "none" }}>
                   <option value="010">010</option>
                   <option value="011">011</option>
                 </Select>
                 <Input type="text" sm block />
-                <Button sm style={{ flex: 'none' }}>인증</Button>
+                <Button sm style={{ flex: "none" }}>
+                  인증
+                </Button>
               </InputGroup>
             </Col>
           </Row>

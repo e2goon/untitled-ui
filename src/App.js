@@ -10,7 +10,7 @@ function App() {
   return (
     // TODO: 많이 쌓이면 routes.js 로 분리
     <Switch>
-      <Route exact path="/" component={Guide} />
+      <Route path="/" component={Guide} exact />
       <Route path="/user/create" component={CreateUser} />
       <Route component={NoMatch} />
     </Switch>

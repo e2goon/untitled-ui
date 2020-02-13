@@ -19,8 +19,15 @@
     height: 100%;
     opacity: 0;
     z-index: 1;
+    cursor: pointer;
     &:checked + .icon {
       left: calc(100% - 22px);
+    }
+    &:disabled {
+      cursor: not-allowed;
+      & + .icon {
+        background-color: #ccc;
+      }
     }
   }
   .icon {
